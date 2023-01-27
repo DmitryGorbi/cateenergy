@@ -5,31 +5,41 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Каталог</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
 
   <header class="page-header">
-    <a class="page-header__logo" href="index.html">
-      <img class="page-header__logo-image" src="img/logo-desktop.svg" width="202px" height="59px"
-        alt="Логотип Cat Energy">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <ul class="main-nav__list">
-        <li class="main-nav__item main-nav__item--active">
-          <a href="index.html">Главная</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="catalog.html">Каталог продукции</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="form.html">Подбор программмы</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+    <header class="page-header container">
+      <div class="page-header-logo">
+        <div class="logo-img">
+          <a class="logo-img__link" href="index.html">
+            <img class="logo-img__image" src="img/logo-mobile.svg" width="33px" height="37px" alt="Логотип Cat Energy">
+          </a>
+        </div>
+        <div class="logo-word">
+          <a class="logo-word__link" href="index.html">
+            <img class="logo-word__image" src="img/logo-text.svg" width="101px" height="18px" alt="Логотип Cat Energy">
+          </a>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul class="main-nav__list nav-block">
+          <li class="main-nav__item main-nav__item--active">
+            <a class="main-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link">Каталог продукции</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Подбор программмы</a>
+          </li>
+        </ul>
+        <button class="main-nav__toggle button-close" type="button">
+          <span>Открыть меню</span>
+        </button>
+      </nav>
+    </header>
 
   <main class="page-main">
     <h1 class="page-main__caption caption">
