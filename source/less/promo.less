@@ -1,20 +1,31 @@
 .promo {
-  background-color: @basic-green;
-  background-image: url("/img/index-background-desktop.png");
-  opacity: 100, 0.5;
-  background-repeat: no-repeat;
-  background-position: center;
   color: @white;
 }
 
-.promo__caption {
-  text-align: center;
+.promo__header {
+  background-color: @basic-green;
+  background-repeat: no-repeat;
+  padding: 0 20px;
+}
+
+.promo__header {
+  @media (min-width: @tablet-width) {
+    background-color: @white;
+    padding: 0 30px;
+    color: @black;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @basic-green;
+    background-position: right;
+    background-repeat: no-repeat;
+    padding: 0 110px;
+  }
 }
 
 .promo__slogan {
   margin: 0;
   padding: 0;
-  text-align: center;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;

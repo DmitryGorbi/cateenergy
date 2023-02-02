@@ -8,9 +8,24 @@
 }
 
 .page__body {
+  margin: 0;
+  padding: 0;
   display: grid;
   grid-template-rows:
   min-content
   min-content
   min-content;
+}
+
+@media (min-width: @tablet-width) {
+  .page {
+    width: 768px;
+    margin: 0 auto; // на десктопе почему-то не нужно выставлять центровкуц
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page {
+    width: 1440px;
+  }
 }

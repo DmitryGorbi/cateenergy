@@ -1,4 +1,29 @@
 .page-header {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.page-header__logo-wrapper {
+  display: flex;
+}
+
+
+  @media (min-width: @tablet-width) {
+  .page-header__container {
+    display: flex;
+    justify-content: space-between;
+    width: 708px;
+    margin: 0 auto;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__container {
+    width: 1220px;
+  }
 }
