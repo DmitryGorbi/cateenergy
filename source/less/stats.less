@@ -1,8 +1,21 @@
-.stats {
+.stats__wrapper-caption, .stats__content, .stats__wrapper-range {
   background-color: @dark-gray;
 }
 
-.stats__content {
+.stats__wrapper-caption {
+  padding-top: 27px;
+  padding-left: 20px;
+}
+
+.stats__wrapper-range {
+  padding-bottom: 25px;
+}
+
+.stats__content, .stats__range {
+  padding-left: 20px;
+}
+
+.stats__wrapper-content {
   font-family: Arial, Oswald, sans-serif;
 }
 
@@ -10,3 +23,52 @@
   margin: 0;
   padding: 0;
 }
+
+.stats__list, .stats__number {
+  margin: 0;
+}
+
+// .stats__caption, .stats__content, .stats__range {
+//   padding: 0 20px 0 20px;
+// }
+
+ @media (min-width: @tablet-width) {
+  .stats__wrapper-caption {
+    padding-top: 43px;
+    padding-left: 30px;
+  }
+
+  .stats__content, .stats__range {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .stats__wrapper-range {
+    padding-bottom: 33px;
+  }
+
+  .stats__wrapper-caption, .stats__content {
+    background-color: @white;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .stats__wrapper-caption {
+    padding-top: 69px;
+    padding-left: 110px;
+  }
+
+  .stats__wrapper-range {
+    padding-bottom: 75px;
+  }
+
+  .stats__content, .stats__range {
+    padding-left: 110px;
+  }
+
+  .stats__wrapper-content {
+    background-color: @dark-gray;
+  }
+}
+
+
