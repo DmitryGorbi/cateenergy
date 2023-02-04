@@ -10,165 +10,167 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header container">
-    <div class="page-header-logo">
-      <div class="logo-img">
-        <a class="logo-img__link">
-          <img class="logo-img__image" src="img/logo-mobile.svg" width="33px" height="37px" alt="Логотип Cat Energy">
-        </a>
+  <header class="page-header">
+    <div class="page-header__container">
+      <div class="page-header__logo-wrapper">
+        <div class="page-header-logo logo-mobile">
+          <a class="logo-mobile__link">
+            <img class="logo-mobile__image" src="img/logo-mobile.svg" width="33px" height="37px"
+              alt="Логотип Cat Energy">
+            <img class="logo-mobile text-logo" src="img/logo-text.svg" width="101px" height="18px"
+              alt="Логотип Cat Energy">
+          </a>
+        </div>
+        <button class="page-header__toggle button-close" type="button">
+          <span>Открыть меню</span>
+        </button>
       </div>
-      <div class="logo-word">
-        <a class="logo-word__link href="index.html">
-          <img class="logo-word__image" src="img/logo-text.svg" width="101px" height="18px" alt="Логотип Cat Energy">
-        </a>
-      </div>
+      <nav class="main-nav">
+        <ul class="main-nav__list nav-block">
+          <li class="main-nav__item main-nav__item--active">
+            <a class="main-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link">Подбор программмы</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav class="main-nav">
-      <ul class="main-nav__list nav-block">
-        <li class="main-nav__item main-nav__item--active">
-          <a class="main-nav__link" href="index.html">Главная</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link">Подбор программмы</a>
-        </li>
-      </ul>
-      <button class="main-nav__toggle button-close" type="button">
-        <span>Открыть меню</span>
-      </button>
-    </nav>
   </header>
 
-  <main class="page-main container">
-    <h1 class="page-main__caption page-caption">
-      Подбор программы
-    </h1>
-    <section class="form">
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <h2 class="form__caption">
-          Заполните анкету, и мы подберем
-          программу питания для вашего кота
-        </h2>
+  <main class="page-main">
+    <div class="page-main__wrapper">
+      <h1 class="page-main__caption page-caption">
+        Подбор программы
+      </h1>
+      <section class="form">
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <h2 class="form__caption">
+            Заполните анкету, и мы подберем
+            программу питания для вашего кота
+          </h2>
+
+          <div class="form__wrapper">
+            <fieldset class="form__fieldset form-personal form-personal--indent">
+              <legend class="form-personal__legend visually-hidden">Заполните личные данные</legend>
+              <div class="form-personal__item">
+                <label class="form-personal__label" for="name">Имя*</label>
+                <input class="form-personal__input" type="text" id="name" name="name" placeholder="Рита" required>
+              </div>
+              <div class="form-personal__item">
+                <label class="form-personal__label" for="weight">Вес (кг):*</label>
+                <input class="form-personal__input" type="number" required id="weight" name="weight" placeholder="7"
+                  min="0" max="20">
+              </div>
+              <div class="form-personal__item">
+                <label class="form-personal__label" for="age">Возраст (лет):</label>
+                <input class="form-personal__input" type="number" required id="age" name="age" placeholder="7" min="0"
+                  max="20">
+              </div>
+            </fieldset>
 
 
-        <fieldset class="form__fieldset form-personal form-personal--indent">
-          <legend class="form-personal__legend visually-hidden">Заполните личные данные</legend>
-          <div class="form-personal__item">
-            <label class="form-personal__label" for="name">Имя*</label>
-              <input class="form-personal__input" type="text" id="name" name="name" placeholder="Рита" required>
+            <fieldset class="form__fieldset form-radio">
+              <legend class="form-radio__legend visually-hidden">Ваша цель</legend>
+              <div class="form-radio__item radio-field">
+                <label class="form-radio__label">
+                  <input class="form-radio__input form-radio__input--decor" type="radio" name="goal" checked>
+                  Похудение
+                </label>
+              </div>
+              <div class="form-radio__item radio-field">
+                <label class="form-radio__label">
+                  <input class="form-radio__input form-radio__input--decor" type="radio" name="goal">
+                  <span>Набор массы</span>
+                </label>
+              </div>
+              <div class="form-radio__item radio-field">
+                <label class="form-radio__label">
+                  <input class="form-radio__input form-radio__input--decor" type="radio" name="goal">
+                  <span>Не знаю (Нужен ваш совет)</span>
+                </label>
+              </div>
+            </fieldset>
           </div>
-          <div class="form-personal__item">
-            <label class="form-personal__label" for="weight">Вес (кг):*</label>
-              <input class="form-personal__input" type="number" required id="weight" name="weight" placeholder="7" min="0" max="20">
-          </div>
-          <div class="form-personal__item">
-            <label class="form-personal__label" for="age">Возраст (лет):</label>
-              <input class="form-personal__input" type="number" required id="age" name="age" placeholder="7" min="0" max="20">
-          </div>
-        </fieldset>
+
+          <fieldset class="form__fieldset form-contacts">
+            <legend class="form-contacts__legend">Контактные данные<br> (владельца кота)</legend>
+            <div class="form-contacts__wrapper">
+              <div class="form-contacts__item">
+                <label class="form-contacts__label" for="email">E-mail:*</label>
+                <input class="form-contacts__input form-contacts__input--email" type="email" id="email" name="email"
+                  placeholder="kuklachev@gmail.com" required>
+              </div>
+              <div class="form-contacts__item">
+                <label class="form-contacts__label" for="tel">Телефон:*</label>
+                <input class="form-contacts__input form-contacts__input--tel" id="tel" type="tel" name="tel"
+                  placeholder="8 (960) 900-60-90" required>
+              </div>
+            </div>
+          </fieldset>
 
 
-        <fieldset class="form__fieldset form-radio">
-          <legend class="form-radio__legend visually-hidden">Ваша цель</legend>
-          <div class="form-radio__item radio-field">
-            <label class="form-radio__label">
-              <input class="form-radio__input form-radio__input--decor" type="radio" name="goal" checked>
-              Похудение
+          <div class="form__comment">
+            <label class="form__legend">Комментарий
+              <textarea class="form__comment-input" name="comment">Расскажите обо всех повадках кота</textarea>
             </label>
           </div>
-          <div class="form-radio__item radio-field">
-            <label class="form-radio__label">
-              <input class="form-radio__input form-radio__input--decor" type="radio" name="goal">
-              <span>Набор массы</span>
-            </label>
-          </div>
-          <div class="form-radio__item radio-field">
-            <label class="form-radio__label">
-              <input class="form-radio__input form-radio__input--decor" type="radio" name="goal">
-              <span>Не знаю (Нужен ваш совет)</span>
-            </label>
-          </div>
-        </fieldset>
 
+          <fieldset class="form__fieldset form-checkbox form-checkbox--grid">
+            <legend class="form-checkbox__legend">Дополнительно</legend>
+            <div class="form-checkbox__item">
+              <label class="form-checkbox__label">
+                <input class="form-checkbox__input" type="checkbox" name="instead-sugar" checked>
+                Сахарозаменитель
+              </label>
+            </div>
+            <div class="form-checkbox__item">
+              <label class="form-checkbox__label">
+                <input class="form-checkbox__input" type="checkbox" name="water">
+                Питьевая вода
+              </label>
+            </div>
+            <div class="form-checkbox__item">
+              <label class="form-checkbox__label">
+                <input type="checkbox" name="milk">
+                Молоко
+              </label>
+            </div>
+            <div class="form-checkbox__item">
+              <label class="form-checkbox__label">
+                <input type="checkbox" name="vitamins">
+                Витамины
+              </label>
+            </div>
+          </fieldset>
+          <button class="form__button button" type="submit">Отправить заявку</button>
+          <p class="form__text"><span>* — Обязательные поля</span></p>
 
-
-
-        <fieldset class="form__fieldset form-contacts">
-          <legend class="form-contacts__legend">Контактные данные<br> (владельца кота)</legend>
-          <div class="form-contacts__item">
-            <label class="form-contacts__label" for="email">E-mail:*</label>
-              <input class="form-contacts__input form-contacts__input--email" type="email" id="email" name="email"
-                placeholder="kuklachev@gmail.com" required>
-          </div>
-          <div class="form-contacts__item">
-            <label class="form-contacts__label" for="tel">Телефон:*</label>
-              <input class="form-contacts__input form-contacts__input--tel" id="tel" type="tel" name="tel"
-                placeholder="8 (960) 900-60-90" required>
-          </div>
-        </fieldset>
-
-        <div class="form__comment">
-          <label class="form__legend">Комментарий
-            <textarea class="form__comment-input" name="comment">Расскажите обо всех повадках кота</textarea>
-          </label>
-        </div>
-
-        <fieldset class="form__fieldset form-checkbox">
-          <legend class="form-checkbox__legend">Дополнительно</legend>
-          <div class="form-checkbox__item">
-            <label class="form-checkbox__label">
-              <input class="form-checkbox__input" type="checkbox" name="instead-sugar" checked>
-              Сахарозаменитель
-            </label>
-          </div>
-          <div class="form-checkbox__item">
-            <label class="form-checkbox__label">
-              <input class="form-checkbox__input" type="checkbox" name="water">
-              Питьевая вода
-            </label>
-          </div>
-          <div class="form-checkbox__item">
-            <label class="form-checkbox__label">
-              <input type="checkbox" name="milk">
-              Молоко
-            </label>
-          </div>
-          <div class="form-checkbox__item">
-            <label class="form-checkbox__label">
-              <input type="checkbox" name="vitamins">
-              Витамины
-            </label>
-          </div>
-        </fieldset>
-        <button class="form__button button" type="submit">Отправить заявку</button>
-        <p class="form__text"><span>* — Обязательные поля</span></p>
-
-      </form>
-    </section>
-
+        </form>
+      </section>
+    </div>
   </main>
 
   <footer class="page-footer">
-    <section class="contact-map contact-map--fill">
-      <div class="container">
-        <h2>Адрес компании с картой</h2>
-        <div class="contact-map__wrapper">
-          <p class="contact-map__invite">Приглашаем к сотрудничеству диллеров</p>
-          <address class="contact-map__address">
-            <p class="contact-map__street">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-          </address>
-        </div>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d97526.7747258837!2d44.489113599999996!3d40.19322879999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1674789646969!5m2!1sru!2s"
-          width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <section class="contact-map">
+      <h2 class="visually-hidden">Адрес компании с картой</h2>
+      <div class="contact-map__wrapper contact-map__wrapper--color">
+        <p class="contact-map__invite">Приглашаем к сотрудничеству диллеров</p>
+        <address class="contact-map__address">
+          <p class="contact-map__street">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </address>
       </div>
     </section>
 
     <div class="page-footer__bottom">
-      <div class="container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d97526.7747258837!2d44.489113599999996!3d40.19322879999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1674789646969!5m2!1sru!2s"
+        width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="page-footer__bottom-wrapper">
         <div class="page-footer__logo text-logo">
           <a class="text-logo__link">
             <img class="text-logo__image" src="img/logo-text.svg" width="101px" height="18px" alt="Логотип Cat Energy">

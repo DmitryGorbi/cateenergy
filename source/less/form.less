@@ -19,11 +19,17 @@
   }
 
 .form__comment-input {
+  .label();
   width: 100%;
   height: 150px;
   padding: 9px 0 0 15px;
   color: @special_dark-grey;
-  .label();
   font-family: inherit;
   box-sizing: border-box;
+}
+
+@media (min-width: @desktop-width) {
+  .form__wrapper {
+    display: flex;
+  }
 }

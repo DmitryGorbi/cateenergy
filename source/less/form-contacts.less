@@ -32,3 +32,10 @@ color: @black;
 .form-contacts__input::placeholder {
   color: @special_dark-grey;
 }
+
+@media (min-width: @desktop-width) {
+  .form-contacts__wrapper {
+    display: flex;
+    justify-content: space-between; // временно
+  }
+}
