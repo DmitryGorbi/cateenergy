@@ -11,52 +11,59 @@
 
 <body class="page__body">
   <header class="page-header">
-    <div class="page-header__container">
-      <div class="page-header__logo-wrapper">
-        <div class="page-header-logo logo-mobile">
-          <a class="logo-mobile__link">
-            <img class="logo-mobile__image" src="img/logo-mobile.svg" width="33px" height="37px"
-              alt="Логотип Cat Energy">
-            <img class="logo-mobile text-logo" src="img/logo-text.svg" width="101px" height="18px"
+    <div class="page-header__content">
+      <div class="page-header__container">
+        <div class="page-header__wrapper">
+          <div class="page-header-logo logo-mobile">
+            <a class="logo-mobile__link">
+              <img class="logo-mobile__image" src="img/logo-mobile.svg" width="33px" height="37px"
+                alt="Логотип Cat Energy">
+              <img class="logo-mobile__text text-logo" src="img/logo-text.svg" width="101px" height="18px"
+                alt="Логотип Cat Energy">
+            </a>
+          </div>
+          <!-- <div class="page-header-logo logo">
+          <a class="logo__link">
+            <img class="logo__image" src="img/logo-desktop.svg" width="174px" height="51px"
               alt="Логотип Cat Energy">
           </a>
+        </div> -->
+          <button class="page-header__toggle button-close" type="button">
+            <span>Открыть меню</span>
+          </button>
         </div>
-        <button class="page-header__toggle button-close" type="button">
-          <span>Открыть меню</span>
-        </button>
+        <nav class="main-nav">
+          <ul class="main-nav__list nav-block">
+            <li class="main-nav__item main-nav__item--active">
+              <a class="main-nav__link">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Подбор программмы</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav class="main-nav">
-        <ul class="main-nav__list nav-block">
-          <li class="main-nav__item main-nav__item--active">
-            <a class="main-nav__link">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Подбор программмы</a>
-          </li>
-        </ul>
-      </nav>
+      <section class="promo">
+        <div class="promo__wrapper">
+          <header class="promo__header">
+            <h1 class="promo__caption page-caption">
+              Функциональное <br>
+              питание для котов
+            </h1>
+            <p class="promo__slogan">
+              Занялся собой? Займись котом!
+            </p>
+          </header>
+        </div>
+        <a class="button" href="#">Подобрать программу</a>
+      </section>
     </div>
   </header>
 
   <main class="page-main">
-    <section class="promo">
-      <div class="promo__wrapper">
-        <header class="promo__header">
-          <h1 class="promo__caption page-caption">
-            Функциональное <br>
-            питание для котов
-          </h1>
-          <p class="promo__slogan">
-            Занялся собой? Займись котом!
-          </p>
-          <a class="button" href="#">Подобрать программу</a>
-        </header>
-      </div>
-    </section>
-
     <section class="products">
       <h2>Наши программмы</h2>
       <ul class="products__list">
