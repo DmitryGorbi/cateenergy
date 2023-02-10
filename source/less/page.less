@@ -2,11 +2,11 @@
   margin: 0;
   padding: 0;
   height: 100%;
-  min-width: 320px;
   color: @special_dark-grey;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   background-color: @white;
+  margin: 0 auto;
 }
 
 .page__body {
@@ -17,17 +17,4 @@
   min-content
   min-content
   min-content;
-}
-
-@media (min-width: @tablet-width) {
-  .page {
-    width: 768px;
-    margin: 0 auto; // на десктопе почему-то не нужно выставлять центровкуц
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page {
-    width: 1440px;
-  }
 }
