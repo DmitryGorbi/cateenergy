@@ -11,60 +11,48 @@
 
 <body class="page__body">
   <header class="page-header">
-    <div class="page-header__content">
-      <div class="page-header__container">
-        <div class="page-header__wrapper">
-          <div class="page-header-logo logo-mobile">
-            <a class="logo-mobile__link">
-              <img class="logo-mobile__image" src="img/logo-mobile.svg" width="33px" height="37px"
-                alt="Логотип Cat Energy">
-              <img class="logo-mobile__text text-logo" src="img/logo-text.svg" width="101px" height="18px"
-                alt="Логотип Cat Energy">
-            </a>
-          </div>
-          <!-- <div class="page-header-logo logo">
-          <a class="logo__link">
-            <img class="logo__image" src="img/logo-desktop.svg" width="174px" height="51px"
-              alt="Логотип Cat Energy">
-          </a>
-        </div> -->
-          <button class="page-header__toggle button-close" type="button">
-            <span>Открыть меню</span>
-          </button>
+    <div class="page-header__content container">
+      <div class="page-header__wrapper">
+        <a class="logo-mobile">
+          <img class="logo-mobile__image" src="img/logo-mobile.svg" width="33px" height="37px" alt="Логотип Cat Energy">
+          <img class="logo-mobile__text text-logo" src="img/logo-text.svg" width="101px" height="18px"
+            alt="Логотип Cat Energy">
+        </a>
+        <div class="page-header__toggle">
+          <button class="button-switch--closed button-switch" type="button">
+            <span class="visually-hidden">Открыть меню</span>
         </div>
-        <nav class="main-nav">
-          <ul class="main-nav__list nav-block">
-            <li class="main-nav__item main-nav__item--active">
-              <a class="main-nav__link">Главная</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="form.html">Подбор программмы</a>
-            </li>
-          </ul>
-        </nav>
+        </button>
       </div>
-      <section class="promo">
-        <div class="promo__wrapper">
-          <div class="promo__content">
-            <header class="promo__header">
-              <h1 class="promo__caption page-caption">
-                Функциональное <br>
-                питание для котов
-              </h1>
-              <p class="promo__slogan">
-                Занялся собой? Займись котом!
-              </p>
-              <img class="promo__image" src="../source/img/index-can-mobile.png" alt="Набор Cat Energy Pro курица">
-            </header>
-          </div>
-          <div class="promo__button-wrapper">
-            <a class="button promo__button" href="#">Подобрать программу</a>
-          </div>
-        </div>
-      </section>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <ul class="main-nav__list nav-block">
+          <li class="nav-block__item nav-block__item--active">
+            <a class="nav-block__link">Главная</a>
+          </li>
+          <li class="nav-block__item">
+            <a class="nav-block__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="nav-block__item">
+            <a class="nav-block__link" href="form.html">Подбор программмы</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <section class="promo">
+      <div class="container">
+        <header class="promo__header">
+          <h1 class="promo__caption page-caption">
+            Функциональное <br>
+            питание для котов
+          </h1>
+          <p class="promo__slogan">
+            Занялся собой? Займись котом!
+          </p>
+          <img class="promo__image" src="../source/img/index-can-mobile.png" alt="Набор Cat Energy Pro курица">
+          <a class="button promo__button" href="#">Подобрать программу</a>
+        </header>
+      </div>
+    </section>
     </div>
   </header>
 
@@ -214,7 +202,18 @@
       </div>
     </div>
   </footer>
+  <script src="js/script.js"></script>
+  <!-- <script>
+    const navSwitch = document.querySelector('.button-switch');
+const mainNav = document.querySelector('.main-nav');
 
+navSwitch.addEventListener('click', function() {
+  if navSwitch.classList.contains('button-switch--closed') {
+    navSwitch.classList.remove('button-switch--closed');
+    navSwitch.classList.add('button-switch--open');
+  }
+})
+  </script> -->
 </body>
 
 </html>

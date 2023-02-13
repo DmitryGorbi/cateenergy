@@ -1,0 +1,57 @@
+.button-switch {
+  position: absolute;
+  width: 24px;
+  height: 18px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: transparent;
+  outline: none;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+// .menu-burger--open {
+
+// }
+
+.button-switch--closed.button-switch::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 0;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 2px;
+  background-color: @black;
+  box-shadow: 0 8px 0 0 @black, 0 16px 0 0 @black;
+}
+
+.button-switch--open.button-switch {
+  &::after,
+  &::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 2px;
+  background-color: @black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
