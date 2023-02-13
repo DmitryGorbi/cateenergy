@@ -1,6 +1,9 @@
 const navSwitch = document.querySelector('.button-switch');
 const mainNav = document.querySelector('.main-nav');
 
+navSwitch.classList.remove('button-switch--nojs');
+mainNav.classList.remove('main-nav--nojs');
+
 navSwitch.addEventListener('click', function() {
 
   if (navSwitch.classList.contains('button-switch--closed') && mainNav.classList.contains('main-nav--closed')) {
@@ -15,11 +18,3 @@ navSwitch.addEventListener('click', function() {
     mainNav.classList.remove('main-nav--open');
   };
 })
-
-// if (mainNav.classList.contains('main-nav--closed')) {
-//   navSwitch.classList.remove('main-nav--closed');
-//   navSwitch.classList.add('main-nav--open');
-// } else {
-//   navSwitch.classList.add('main-nav--closed');
-//   navSwitch.classList.remove('main-nav--open');
-// };

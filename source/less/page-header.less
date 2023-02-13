@@ -1,3 +1,15 @@
+.page-header__content {
+  padding-top: 12px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px; // нужно поправить, когда заменю логотип на планшете
+    padding-bottom: 20px;
+    align-items: center;
+  }
+}
+
 .page-header__wrapper {
   display: flex;
   justify-content: space-between;
@@ -6,14 +18,4 @@
 
 .page-header__toggle {
   position: relative;
-}
-
-.page-header__content {
-  @media (min-width: @tablet-width) {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    align-items: center;
-  }
 }
