@@ -10,29 +10,27 @@
 </head>
 
 <body class="page__body">
-
   <header class="page-header">
-    <div class="page-header__container">
-      <div class="page-header__logo-wrapper">
-        <div class="page-header-logo logo-mobile">
-          <a class="logo-mobile__link">
-            <img class="logo-mobile__image" src="img/logo-mobile.svg" width="33px" height="37px"
-              alt="Логотип Cat Energy">
-            <img class="logo-mobile text-logo" src="img/logo-text.svg" width="101px" height="18px"
-              alt="Логотип Cat Energy">
-          </a>
+    <div class="page-header__content container">
+      <div class="page-header__wrapper">
+        <a class="logo-mobile" href="index.html">
+          <img class="logo-mobile__image" src="img/logo-mobile.svg" width="33px" height="37px" alt="Логотип Cat Energy">
+          <img class="logo-mobile__text text-logo" src="img/logo-text.svg" width="101px" height="18px"
+            alt="Логотип Cat Energy">
+        </a>
+        <div class="page-header__toggle">
+          <button class="button-switch button-switch--closed button-switch--nojs" type="button">
+            <span class="visually-hidden">Открыть меню</span>
         </div>
-        <button class="page-header__toggle button-close" type="button">
-          <span>Открыть меню</span>
         </button>
       </div>
-      <nav class="main-nav">
-        <ul class="main-nav__list nav-block">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--active">
-            <a class="main-nav__link">Главная</a>
+            <a class="main-nav__link" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            <a class="main-nav__link">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="form.html">Подбор программмы</a>

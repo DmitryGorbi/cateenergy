@@ -1,12 +1,42 @@
-.page-header__content {
-  padding-top: 12px;
+@media (min-width: @desktop-width) {
+  .page-header--background {
+    height: 694px;
 
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      left: 50%;
+      height: 696px;
+      top: 0;
+      right: 0;
+      background-position: top right;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+
+    &::before {
+      background-image: url("../img/index-background.png");
+      background-size: 100%;
+    }
+
+    &::after {
+      background-color: @light-green;
+    }
+  }
+}
+
+.page-header__content {
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
     padding-top: 24px; // нужно поправить, когда заменю логотип на планшете
     padding-bottom: 20px;
     align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 35px; // нужно измерить и поправить
   }
 }
 
