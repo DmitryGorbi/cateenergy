@@ -1,0 +1,133 @@
+// этот блок не отталкивается внешним маргином. Сделан с внутренним блоком. Сделал для пробы
+
+.advantages__wrapper {
+  padding: 27px 0 42px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 45px 0 104px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 71px 0 68px 0;
+  }
+}
+
+.advantages__caption {
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 32px;
+  }
+}
+
+.advantages__list {
+  display: grid;
+  row-gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 36% 36%;
+    column-gap: 137px;
+    row-gap: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 245px);
+    column-gap: 80px;
+  }
+}
+
+.advantages__item {
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+// Иконкию Наверное разумнее вставлять иконки целиком, но я сделал квадрат в css
+
+.advantages__item {
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  position: relative;
+
+  &::before {
+    content: "";
+    min-width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    background-color: @basic-green;
+  }
+
+  &--first::before {
+    background-image: url("../img/icons/icon_leaf.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--second::before {
+    background-image: url("../img/icons/icon_tub.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--third::before {
+    background-image: url("../img/icons/icon_eat.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--fourth::before {
+    background-image: url("../img/icons/icon_alarm.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 40px;
+    padding-bottom: 60px;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+      margin-right: 0;
+      margin-bottom: 31px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0px;
+      left: 115px;
+      font-size: 280px;
+      line-height: 280px;
+      font-family: "Oswald";
+      color: rgba(242, 242, 242, 1);
+      z-index: -1;
+    }
+
+    &--first::after {
+      content: "1";
+    }
+
+    &--second::after {
+      content: "2";
+    }
+
+    &--third::after {
+      content: "3";
+    }
+
+    &--fourth::after {
+      content: "4";
+    }
+  }
+}

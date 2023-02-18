@@ -1,3 +1,15 @@
+.page-header {
+  margin-bottom: 22px; // вопрос: стоит ли отступ задавать именно этому блоку
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 82px;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .page-header--background {
     height: 694px;
@@ -27,6 +39,7 @@
 }
 
 .page-header__content {
+
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
