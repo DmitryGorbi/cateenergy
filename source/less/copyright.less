@@ -1,0 +1,21 @@
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: @special_dark-gray;
+
+  @media (min-width: @tablet-width) {
+    gap: 22px;
+  }
+}
+
+.copyright__link:hover path {
+  fill: @basic-green;
+}
+
+.copyright__link:active {
+  opacity: 0.3;
+}

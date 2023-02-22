@@ -1,0 +1,30 @@
+.social {
+  padding-top: 20px;
+  padding-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.social__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+
+  @media (min-width: @tablet-width) {
+    gap: 25px;
+  }
+}
+
+.social__item-icon:hover path {
+  fill: @basic-green;
+}
+
+.social__item-icon:active path {
+  opacity: 0.3;
+}
