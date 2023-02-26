@@ -10,7 +10,7 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header  page-header--background">
+  <header class="page-header page-header--index">
     <div class="page-header__content container">
       <div class="page-header__wrapper">
         <a class="logo-mobile">
@@ -26,14 +26,14 @@
       </div>
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--active">
-            <a class="main-nav__link">Главная</a>
+          <li class="main-nav__item main-nav__item-index main-nav__item-index--active">
+            <a class="main-nav__link main-nav__link-index">Главная</a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+          <li class="main-nav__item main-nav__item-index">
+            <a class="main-nav__link main-nav__link-index" href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Подбор программмы</a>
+          <li class="main-nav__item main-nav__item-index">
+            <a class="main-nav__link main-nav__link-index" href="form.html">Подбор программмы</a>
           </li>
         </ul>
       </nav>
@@ -234,17 +234,6 @@
     </div>
   </footer>
   <script src="js/script.js"></script>
-  <!-- <script>
-    const navSwitch = document.querySelector('.button-switch');
-const mainNav = document.querySelector('.main-nav');
-
-navSwitch.addEventListener('click', function() {
-  if navSwitch.classList.contains('button-switch--closed') {
-    navSwitch.classList.remove('button-switch--closed');
-    navSwitch.classList.add('button-switch--open');
-  }
-})
-  </script> -->
 </body>
 
 </html>

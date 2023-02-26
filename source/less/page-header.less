@@ -1,18 +1,22 @@
 .page-header {
-  margin-bottom: 22px; // вопрос: стоит ли отступ задавать именно этому блоку
+  padding-bottom: 22px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 82px;
+    padding-bottom: 0;
   }
 }
 
+// Убрал отступ для внутренних страниц
+
+.page-header--inner {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
 @media (min-width: @desktop-width) {
-  .page-header--background {
+  .page-header--index {
     height: 694px;
+    margin-bottom: 82px;
 
     &::before,
     &::after {
@@ -35,6 +39,12 @@
     &::after {
       background-color: @light-green;
     }
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .page-header__content--line {
+    border-bottom: 1px solid @light-gray;
   }
 }
 
