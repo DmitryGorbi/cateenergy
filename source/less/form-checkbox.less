@@ -1,0 +1,117 @@
+.form-checkbox {
+  padding-top: 23px;
+  padding-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 65px;
+    padding-bottom: 0;
+  }
+}
+
+.form-checkbox__legend {
+  margin-bottom: 34px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: -20px;
+
+  &::after {
+    content: "";
+    position: relative;
+    height: 2px;
+    background-color: @basic-green;
+    flex-grow: 1;
+    top: 3px;
+    margin-left: 15px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 -65px 57px -70px;
+
+    &::after {
+      top: 4px;
+      margin-left: 40px;
+    }
+
+    &::before {
+      content: "";
+      position: relative;
+      height: 2px;
+      background-color: @basic-green;
+      width: 30px;
+      top: 4px;
+      margin-right: 40px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 -110px 57px -110px;
+
+    &::before {
+      width: 70px;
+    }
+  }
+}
+
+.form-checkbox__input {
+  margin: 0;
+}
+
+.form-checkbox__item {
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.form-checkbox__decor {
+  position: relative;
+  margin-left: 45px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    box-shadow: 0 0 0 1px @special-gray;
+    width: 30px;
+    height: 30px;
+    left: -45px;
+    top: -2px;
+    box-sizing: border-box;
+    transition: 0.5s ease all;
+
+    @media (min-width: @tablet-width) {
+      width: 40px;
+      height: 40px;
+      left: -60px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 60px;
+  }
+}
+
+.form-checkbox__input:checked + .form-checkbox__decor::before {
+  background-image: url("../img/icons/checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form-checkbox__grid {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 282px 1fr;
+    column-gap: 80px;
+    row-gap: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

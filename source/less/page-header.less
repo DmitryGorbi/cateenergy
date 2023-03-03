@@ -1,32 +1,18 @@
-.page-header {
-  padding-bottom: 22px;
-
-  @media (min-width: @tablet-width) {
-    padding-bottom: 0;
-  }
-}
-
-// Убрал отступ для внутренних страниц
-
-.page-header--inner {
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
-
 @media (min-width: @desktop-width) {
   .page-header--index {
     height: 694px;
     margin-bottom: 82px;
+    position: relative;
 
     &::before,
     &::after {
       position: absolute;
       content: '';
       left: 50%;
-      height: 696px;
+      height: 694px;
       top: 0;
       right: 0;
-      background-position: top right;
+      // background-position: top right;
       background-repeat: no-repeat;
       z-index: -1;
     }
@@ -53,22 +39,30 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
-    padding-top: 24px; // нужно поправить, когда заменю логотип на планшете
-    padding-bottom: 20px;
-    align-items: center;
+    padding-top: 25px;
+    min-height: 52px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 35px; // нужно измерить и поправить
+    padding-top: 54px;
+    min-height: 60px;
   }
 }
 
 .page-header__wrapper {
+  padding-top: 11px;
+  padding-bottom: 17px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .page-header__toggle {
+  padding-top: 0;
+  padding-bottom: 0;
   position: relative;
 }

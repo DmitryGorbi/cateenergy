@@ -1,0 +1,30 @@
+.form-personal {
+  margin: 0 -20px 0 -20px;
+  padding: 0 20px 24px 20px;
+  border-bottom: 1px solid @gray-gray;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0 0 72px 0;
+    border-bottom: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+.form-personal__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 13px;
+  }
+}
+
+.form-personal__label {
+  margin-right: 10px;
+  white-space: nowrap;
+}

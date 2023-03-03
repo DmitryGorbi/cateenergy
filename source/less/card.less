@@ -34,13 +34,12 @@
   }
 
   @media (min-width: @tablet-width) {
-    position: relative;
-    padding: 161px 36px 40px 36px;
+    padding: 0 36px 40px 36px;
     border-top: none;
     margin-left: 0;
     margin-right: 0;
     grid-template-columns: 1fr;
-
+    grid-template-rows: 125px 1fr;
     &:not(:last-child) {
       background-color: @basic-gray;
     }
@@ -66,8 +65,9 @@
     line-height: 24px;
     text-align: center;
     margin: 0 auto;
+    margin-top: 40px;
     margin-bottom: 16px; // -5px за счет списка
-    width: 150px;
+    min-width: 150px;
   }
 }
 
@@ -99,21 +99,45 @@
   }
 }
 
-.card__image {
+
+.card__image-content {
   grid-column: 1/2;
-  order: -1;
+  grid-row: 1/2;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column; // не понятное для меня поведение flexa, закоментированные строки тоже работаю по выравниваю в центре и по низу картинки
+    justify-content: end;
+    margin: 0 auto;
+    // flex-direction: row;
+    // align-items: end;
+    // justify-content: center;
+    // width: 100%;
+  }
+}
+
+.card__image {
   position: relative;
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
 
   @media (min-width: @tablet-width) {
-    position: absolute;
-    top: 0;
+    position: static;
+    transform: none;
+    width: 100%;
+    height: auto;
   }
 }
 
-.button__card {
+.card__image-bg {
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.card__button {
   grid-column: 1/-1;
 
   @media (min-width: @tablet-width) {

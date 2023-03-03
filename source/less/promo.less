@@ -1,6 +1,32 @@
 .promo__slogan {
   margin: 0;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 49px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 49px;
+  }
+}
+
+.promo__caption {
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 41px;
+  }
 }
 
 .promo__image {
@@ -9,7 +35,63 @@
   margin-bottom: 3px;
   left: 50%;
   transform: translate(-50%);
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    width: 709px;
+    height: 609px;
+    top: 305px;
+    left: 51%;
+    z-index: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    display: block;
+    width: 552px;
+    height: 499px;
+    top: 0;
+    left: 58%;
+    top: 141px;
+    // left: 58%;
+    z-index: 1;
+  }
 }
+
+.promo__header {
+  @media (min-width: @tablet-width) {
+    padding-left: 87px;
+    padding-top: 28px; // нужно измерить и поправить, зависит от шапки
+    color: @black;
+    height: 872px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 80px;
+    padding-top: 79px; // нужно измерить и поправить
+    color: @black;
+    height: 0;
+  }
+}
+
+.promo__button {
+  @media (min-width: @tablet-width) {
+    width: 244px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 20px;
+    line-height: 20px;
+    }
+
+  @media (min-width: @desktop-width) {
+    width: 244px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 20px;
+    line-height: 20px;
+    }
+  }
+
 
 @media (max-width: @mobile-width-only) {
   .promo {
@@ -41,67 +123,3 @@
 }
 
 
-@media (min-width: @tablet-width) {
-    .promo__header {
-      padding-left: 87px;
-      padding-top: 28px; // нужно измерить и поправить, зависит от шапки
-      color: @black;
-    }
-
-    .promo__caption {
-      font-size: 60px;
-      line-height: 60px;
-      margin-bottom: 41px;
-    }
-
-    .promo__slogan {
-      font-size: 20px;
-      line-height: 20px;
-      margin-bottom: 49px;
-    }
-
-    .promo__button {
-      width: 244px;
-      padding-top: 14px;
-      padding-bottom: 14px;
-      font-size: 20px;
-      line-height: 20px;
-    }
-
-    .promo__image {
-      position: absolute;
-      display: none;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    .promo__header {
-      padding-left: 80px;
-      padding-top: 79px; // нужно измерить и поправить
-      color: @black;
-    }
-
-    .promo__caption {
-      font-size: 60px;
-      line-height: 60px;
-      margin-bottom: 41px;
-    }
-
-    .promo__slogan {
-      font-size: 20px;
-      line-height: 20px;
-      margin-bottom: 49px;
-    }
-
-    .promo__button {
-      width: 244px;
-      padding-top: 14px;
-      padding-bottom: 14px;
-      font-size: 20px;
-      line-height: 20px;
-    }
-
-    .promo__image {
-      display: block;
-    }
-  }

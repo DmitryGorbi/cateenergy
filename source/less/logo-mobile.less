@@ -1,15 +1,31 @@
 .logo-mobile {
-  height: 67px;
+  height: 37px;
   min-width: 191px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
+  @media (min-width: @tablet-width) {
+    display: block;
+    // margin: auto 0;
+  }
+}
 
 .logo-mobile__image {
   width: 33px;
   height: 37px;
+
+  @media (min-width: @tablet-width) {
+    width: 175px;
+    height: 52px;
+    display: block;
+    // text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 202px;
+    height: 59px;
+  }
 }
 
 .logo-mobile__text {
@@ -21,6 +37,6 @@
   right: 0;
 
   @media (min-width: @tablet-width) {
-    position: relative;
+    display: none;
   }
 }

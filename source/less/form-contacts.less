@@ -1,0 +1,109 @@
+.form-contacts {
+  padding-bottom: 23px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 69px;
+  }
+}
+
+.form-contacts__wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    gap: 78px;
+  }
+}
+
+.form-contacts__legend {
+  margin: 0 -20px 35px;
+  background-image: linear-gradient(to bottom, transparent 0, transparent 13px, @basic-green 13px, @basic-green 15px, transparent 15px, transparent 100%);
+
+  @media (min-width: @tablet-width) {
+    background-image: linear-gradient(to bottom, transparent 0, transparent 22px, @basic-green 22px, @basic-green 24px, transparent 24px, transparent 100%);
+    margin: 0 -65px 76px -70px;
+    padding-left: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 -110px 76px -110px;
+    padding-left: 70px;
+  }
+}
+
+.form-contacts__title {
+  background-color: @white;
+  padding: 0 20px;
+  display: inline-block;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 40px;
+  }
+}
+
+.form-contacts__br {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.form-contacts__item {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 13px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-grow: 1;
+
+    &:not(:last-child) {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.form-contacts__label {
+  margin-right: 10px;
+}
+
+.form-contacts__email, .form-contacts__tel {
+  width: 100%;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 19px;
+    margin: auto 0;
+    background-size: cover;
+  }
+}
+
+.form-contacts__email {
+  &::after {
+    width: 20px;
+    height: 14px;
+    background: url('../img/icons/icon_email.svg') no-repeat;
+  }
+}
+
+.form-contacts__tel {
+  &::after {
+    width: 20px;
+    height: 20px;
+    background: url('../img/icons/phone-mobile.svg') no-repeat;
+  }
+}
