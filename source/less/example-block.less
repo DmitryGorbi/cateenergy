@@ -32,3 +32,36 @@
   text-transform: uppercase;
   box-sizing: border-box;
 }
+
+.example-block--modifier {
+  // width: 44%;
+
+  @media (min-width: @tablet-width) {
+    min-width: 162px;
+    min-height: 72px;
+  }
+}
+
+.example-block__title-modifier {
+  background-color: @dark-gray;
+
+  @media (min-width: @tablet-width) {
+    background-color: @white;
+    font-size: 14px;
+    line-height: 14px;
+    white-space: nowrap;
+    transform: translate(-50%, 50%);
+    padding: 0 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @dark-gray;
+  }
+}
+
+.example-block__value-modifier {
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}

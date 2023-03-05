@@ -47,6 +47,12 @@
   }
 }
 
+.example__content {
+  @media (min-width: @desktop-width) {
+    padding-right: 0; // из-за containera верстка на декстопе поехала
+  }
+}
+
 .example__text {
   margin: 0;
   margin-bottom: 25px;
@@ -96,39 +102,6 @@
   }
 }
 
-.example-block--modifier {
-  // width: 44%;
-
-  @media (min-width: @tablet-width) {
-    min-width: 162px;
-    min-height: 72px;
-  }
-}
-
-.example-block__title-modifier {
-  background-color: @dark-gray;
-
-  @media (min-width: @tablet-width) {
-    background-color: @white;
-    font-size: 14px;
-    line-height: 14px;
-    white-space: nowrap;
-    transform: translate(-50%, 50%);
-    padding: 0 5px;
-  }
-
-  @media (min-width: @desktop-width) {
-    background-color: @dark-gray;
-  }
-}
-
-.example-block__value-modifier {
-  @media (min-width: @tablet-width) {
-    font-size: 30px;
-    line-height: 37px;
-  }
-}
-
 .example__part {
   font-size: 14px;
   line-height: 20px;
@@ -168,21 +141,6 @@
 
   @media (min-width: @desktop-width) {
     padding-bottom: 0;
-  }
-}
-
-.example__cat-picture {
-  margin: 0 -20px;
-}
-
-.example__content {
-  @media (min-width: @desktop-width) {
-    padding-right: 0; // из-за containera верстка на декстопе поехала
-  }
-}
-
-.example__wrapper-slider {
-  @media (min-width: @desktop-width) {
     padding-left: 0; // из-за containera верстка на декстопе поехала
   }
 }
